@@ -1,12 +1,6 @@
 <?php
     require_once './helpers/CSV.php';
 
-    function pr($arr) {
-        echo '<pre>';
-        print_r($arr);
-        echo '</pre>';
-    }
-
     $csv = new CSV("data.csv", "newdata.csv");
     $i = 0;
     $addressesArr = [];
@@ -60,7 +54,7 @@
                             let addresses = [];
                             for(let i = 0; i <= this.catchedAddressesArr.length; i++) {
                                 addresses[i] = this.catchedAddressesArr[i];
-                                if(i >= 7500) break;
+                                // if(i >= 7500) break;
                             }
                             return addresses.splice(2, addresses.length);
                         }

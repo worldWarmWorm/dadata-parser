@@ -25,8 +25,7 @@ class CSV {
      * Метод для чтения из csv-файла. Возвращает массив с данными из csv
      * @return array;
      */
-    public function readCSV(): array
-    {
+    public function readCSV(): array {
         $handle = fopen($this->_fileRead, "r");
 
         $array_line_full = [];
@@ -42,8 +41,7 @@ class CSV {
      * @param array $csv
      * @return array;
      */
-    public function writeCSV(Array $csv): array
-    {
+    public function writeCSV(Array $csv): array {
         $handle = fopen($this->_fileWrite, "a");
 
         foreach ($csv as $value) {
@@ -98,5 +96,16 @@ class CSV {
      */
     public function arrayLength($arr): int|string {
         return $arr ? count($arr) : 'Длина массива равна 0';
+    }
+
+    /**
+     * Выводит данные из массива в документ в читаемом виде
+     * @param $arr - массив который нужно вывести
+     * @return void;
+     */
+    public function prettifyArray($arr) {
+        echo '<pre>';
+        print_r($arr);
+        echo '</pre>';
     }
 }
