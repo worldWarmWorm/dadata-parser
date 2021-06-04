@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="972cc89c-a202-4210-ab6d-0141268b2006" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data copy.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data (копия).csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/CSV.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/CSV.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/newdata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,7 @@
       <workItem from="1616041117616" duration="625000" />
       <workItem from="1618473142101" duration="645000" />
       <workItem from="1622624574606" duration="4836000" />
-      <workItem from="1622687649656" duration="19944000" />
+      <workItem from="1622687649656" duration="20614000" />
     </task>
     <servers />
   </component>
