@@ -29,7 +29,7 @@ class CSV {
         $handle = fopen($this->_fileRead, "r");
 
         $array_line_full = [];
-        while (($line = fgetcsv($handle, 0, ";")) !== FALSE) {
+        while (($line = fgetcsv($handle, 0, ",")) !== FALSE) {
             $array_line_full[] = $line;
         }
         fclose($handle);
