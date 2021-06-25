@@ -56,18 +56,17 @@ class CSV {
      * @param $arr - массив содержащий как успешные так и отвергнутые запросы
      * @return array|string;
      */
-    public function getRejectedQueries($arr): array|string {
+    static function getRejectedQueries($arr): array|string {
         if (!empty($arr)) {
             foreach ($arr as $k => $v) {
                 if ($v === null) {
                     $rejected[$k] = $v;
                 }
             }
-
-            return array_keys($rejected);
+            self::prettifyArray(array_keys($rejected));
+        } else {
+            echo 'Сервер ответил на все запросы!';
         }
-
-        return 'Сервер ответил на все запросы!';
     }
 
     /**
@@ -75,7 +74,7 @@ class CSV {
      * @param $arr - массив содержащий как успешные так и отвергнутые запросы
      * @return array|string;
      */
-    public function getAcceptedQueries($arr): array|string {
+    static function getAcceptedQueries($arr): array|string {
         if (!empty($arr)) {
             foreach ($arr as $k => $v) {
                 if ($v !== null) {
@@ -83,10 +82,10 @@ class CSV {
                 }
             }
 
-            return array_keys($accepted);
+            self::prettifyArray(array_keys($accepted));
+        } else {
+            echo 'Сервер не ответил ни на один запрос!';
         }
-
-        return 'Сервер не ответил ни на один запрос!';
     }
 
     /**
@@ -94,8 +93,8 @@ class CSV {
      * @param $arr - массив который нужно измерить
      * @return int|string;
      */
-    public function arrayLength($arr): int|string {
-        return $arr ? count($arr) : 'Длина массива равна 0';
+    static function arrayLength($arr): int|string {
+        echo $arr ? count($arr) : 'Длина массива равна 0';
     }
 
     /**
@@ -103,9 +102,13 @@ class CSV {
      * @param $arr - массив который нужно вывести
      * @return void;
      */
-    public function prettifyArray($arr) {
+    static function prettifyArray($arr) {
         echo '<pre>';
         print_r($arr);
         echo '</pre>';
+    }
+
+    static function convertToJSON($arr) {
+        return json_encode($arr);
     }
 }
