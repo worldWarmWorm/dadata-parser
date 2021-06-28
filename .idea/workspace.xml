@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="972cc89c-a202-4210-ab6d-0141268b2006" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/newdata.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/newdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/newdata.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/CSV.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/CSV.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newdata.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectId" id="1pulz8OsmtdBUxBH8zqwiBhBjWQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,7 +68,9 @@
       <workItem from="1623051298044" duration="132000" />
       <workItem from="1623051450746" duration="14355000" />
       <workItem from="1623291446512" duration="18243000" />
-      <workItem from="1624515164993" duration="30938000" />
+      <workItem from="1624515164993" duration="35967000" />
+      <workItem from="1624847528409" duration="4474000" />
+      <workItem from="1624852972194" duration="3279000" />
     </task>
     <servers />
   </component>

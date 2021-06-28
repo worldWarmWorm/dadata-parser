@@ -27,23 +27,20 @@ class CSV {
      */
     public function readCSV(): array {
         $handle = fopen($this->_fileRead, "r");
-
         $array_line_full = [];
         while (($line = fgetcsv($handle, 0, ",")) !== FALSE) {
             $array_line_full[] = $line;
         }
         fclose($handle);
+
         return $array_line_full;
     }
 
     /**
      * Метод для записи в csv-файл. Возвращает массив с данными из csv
-     * @param array $csv
-     * @return array;
      */
-    public function writeCSV(Array $csv): array {
+    public function writeCSV(Array $csv) {
         $handle = fopen($this->_fileWrite, "a");
-
         foreach ($csv as $value) {
             fputcsv($handle, explode(";", $value), ";");
         }
@@ -56,17 +53,18 @@ class CSV {
      * @param $arr - массив содержащий как успешные так и отвергнутые запросы
      * @return array|string;
      */
-    static function getRejectedQueries($arr): array|string {
+    public static function getRejectedQueries($arr): array|string {
+        $result = 'Сервер ответил на все запросы!';
         if (!empty($arr)) {
             foreach ($arr as $k => $v) {
                 if ($v === null) {
                     $rejected[$k] = $v;
                 }
             }
-            self::prettifyArray(array_keys($rejected));
-        } else {
-            echo 'Сервер ответил на все запросы!';
+            $result = array_keys($rejected);
         }
+
+        return $result;
     }
 
     /**
@@ -74,18 +72,18 @@ class CSV {
      * @param $arr - массив содержащий как успешные так и отвергнутые запросы
      * @return array|string;
      */
-    static function getAcceptedQueries($arr): array|string {
+    public static function getAcceptedQueries($arr): array|string {
+        $result = 'Сервер не ответил ни на один запрос!';
         if (!empty($arr)) {
             foreach ($arr as $k => $v) {
                 if ($v !== null) {
                     $accepted[$k] = $v;
                 }
             }
-
-            self::prettifyArray(array_keys($accepted));
-        } else {
-            echo 'Сервер не ответил ни на один запрос!';
+            $result = array_keys($accepted);
         }
+
+        return $result;
     }
 
     /**
@@ -93,8 +91,8 @@ class CSV {
      * @param $arr - массив который нужно измерить
      * @return int|string;
      */
-    static function arrayLength($arr): int|string {
-        echo $arr ? count($arr) : 'Длина массива равна 0';
+    public static function arrayLength($arr): int|string {
+        return $arr ? count($arr) : 'Длина массива равна 0';
     }
 
     /**
@@ -102,13 +100,13 @@ class CSV {
      * @param $arr - массив который нужно вывести
      * @return void;
      */
-    static function prettifyArray($arr) {
+    public static function prettifyArray($arr): void {
         echo '<pre>';
         print_r($arr);
         echo '</pre>';
     }
 
-    static function convertToJSON($arr) {
+    public static function convertToJSON($arr): bool|string {
         return json_encode($arr);
     }
 }

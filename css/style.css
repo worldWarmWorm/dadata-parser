@@ -113,6 +113,7 @@ code {
     font-size: 14px;
     font-family: 'Space Mono', monospace;
     color: rgba(255,255,255,.7);
+    word-break: break-word;
 }
 
 .msg_access {
